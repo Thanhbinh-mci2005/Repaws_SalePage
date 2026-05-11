@@ -162,8 +162,13 @@ p  { margin: 0 0 1em; }
   font-size: 1.4rem; color: var(--ink);
   letter-spacing: -.01em;
 }
-.nav__logo-img { height: 36px; width: auto; display: block; object-fit: contain; }
-.nav__logo-img--light { filter: brightness(0) invert(1); }
+.nav__logo-img {
+  height: 40px; width: auto; display: block; object-fit: contain;
+  mix-blend-mode: multiply;
+}
+/* Footer (dark bg): hide white-bg logo, show text only */
+.nav__logo--light .nav__logo-img { display: none; }
+.nav__logo--light .logo-mark--fallback { display: inline-flex !important; color: var(--gold); }
 .logo-mark { color: var(--forest); display: inline-flex; }
 .nav__logo--light { color: var(--ivory); }
 .nav__logo--light .logo-mark { color: var(--gold); }
@@ -256,6 +261,7 @@ p  { margin: 0 0 1em; }
   width: auto;
   height: auto;
   object-fit: contain;
+  mix-blend-mode: multiply;
   filter: drop-shadow(0 24px 30px rgba(17,24,28,.18));
 }
 .hero__caption {
@@ -457,6 +463,7 @@ p  { margin: 0 0 1em; }
 .card__img {
   max-height: 320px; width: auto; max-width: 100%;
   object-fit: contain;
+  mix-blend-mode: multiply;
   transition: transform .35s ease;
 }
 .card:hover .card__img { transform: scale(1.04); }
@@ -933,8 +940,10 @@ p  { margin: 0 0 1em; }
 .modal__image img {
   max-height: 440px; max-width: 100%; width: auto;
   object-fit: contain;
+  mix-blend-mode: multiply;
   filter: drop-shadow(0 20px 30px rgba(17,24,28,.15));
 }
+.modal__thumbs li img { mix-blend-mode: multiply; }
 .modal__thumbs {
   list-style: none; padding: 0; margin: 0;
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
