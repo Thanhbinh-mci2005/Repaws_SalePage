@@ -23,19 +23,19 @@
     if (cart.length === 0) {
       const li = document.createElement('li');
       li.className = 'empty';
-      li.textContent = 'Giỏ hàng trống — hãy thêm sản phẩm yêu thích!';
+      li.textContent = 'Your cart is empty.';
       cartItemsEl.appendChild(li);
     } else {
       cart.forEach((item, idx) => {
         const li = document.createElement('li');
         const left = document.createElement('div');
-        left.innerHTML = `<strong>${item.name}</strong><br/><span style="color:var(--muted);font-size:.8rem">x${item.qty} · ${formatUSD(item.price)}</span>`;
+        left.innerHTML = `<strong>${item.name}</strong><br/><span style="color:var(--muted);font-size:.8rem">Qty ${item.qty} · ${formatUSD(item.price)}</span>`;
         const right = document.createElement('div');
         right.style.textAlign = 'right';
         right.innerHTML = `<div>${formatUSD(item.price * item.qty)}</div>`;
         const remove = document.createElement('button');
         remove.className = 'remove-item';
-        remove.textContent = 'Xoá';
+        remove.textContent = 'Remove';
         remove.addEventListener('click', () => {
           cart.splice(idx, 1);
           renderCart();
@@ -62,7 +62,7 @@
       openCart();
 
       const original = btn.textContent;
-      btn.textContent = '✓ Đã thêm';
+      btn.textContent = 'Added to cart';
       btn.disabled = true;
       setTimeout(() => {
         btn.textContent = original;
@@ -80,12 +80,12 @@
       const email = form.email.value.trim();
       const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!re.test(email)) {
-        note.style.color = '#FFB4A2';
-        note.textContent = 'Vui lòng nhập email hợp lệ.';
+        note.style.color = '#E0997C';
+        note.textContent = 'Please enter a valid email address.';
         return;
       }
       note.style.color = '';
-      note.textContent = `🎉 Cảm ơn! Mã giảm 15% đã được gửi tới ${email}.`;
+      note.textContent = `Thank you. Your 15% subscription code has been sent to ${email}.`;
       form.reset();
     });
   }
@@ -103,9 +103,10 @@
       links.style.top = '100%';
       links.style.left = '0';
       links.style.right = '0';
-      links.style.background = 'var(--cream)';
+      links.style.background = 'var(--ivory)';
       links.style.padding = '20px';
       links.style.borderBottom = '1px solid var(--line)';
+      links.style.gap = '14px';
     });
   }
 

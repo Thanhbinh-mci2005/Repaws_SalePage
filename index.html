@@ -3,19 +3,26 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>RePaws — Chăm sóc thú cưng bền vững từ dứa Việt Nam</title>
-<meta name="description" content="RePaws — dòng sản phẩm chăm sóc thú cưng bền vững được làm từ phụ phẩm dứa và bồ hòn Việt Nam. Dịu nhẹ, an toàn, đạt chứng nhận ECOCERT & FDA." />
+<title>RePaws — Sustainable Pet Care, Crafted from Pineapple Fiber</title>
+<meta name="description" content="RePaws is a premium-sustainable pet care line developed by GreenLeaf Vietnam JSC and ECOSOI Vietnam. ECOCERT certified. FDA registered. Distributed on Amazon US." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- Announcement bar -->
-<div class="announce">
-  <div class="container announce__row">
-    <span>Miễn phí giao hàng cho đơn từ $35 · Đăng ký Subscribe &amp; Save tiết kiệm 15%</span>
+<!-- Top utility bar -->
+<div class="topbar">
+  <div class="container topbar__row">
+    <span class="topbar__item">EN · VN</span>
+    <span class="topbar__sep"></span>
+    <span class="topbar__item">USD</span>
+    <span class="topbar__sep"></span>
+    <span class="topbar__item">Free shipping over $35 · 30-day returns</span>
+    <span class="topbar__push"></span>
+    <a class="topbar__link" href="#">Wholesale Inquiry</a>
+    <a class="topbar__link" href="#">Investor Relations</a>
   </div>
 </div>
 
@@ -23,20 +30,24 @@
 <header class="nav">
   <div class="container nav__row">
     <a href="#" class="nav__logo" aria-label="RePaws">
-      <span class="logo-mark">🐾</span>
-      <span class="logo-text">RePaws</span>
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28"><path d="M16 2 L21 11 L31 13 L24 21 L26 31 L16 26 L6 31 L8 21 L1 13 L11 11 Z" fill="currentColor"/></svg>
+      </span>
+      <span class="logo-text">RePaws<sup>®</sup></span>
     </a>
-    <nav class="nav__links" aria-label="Điều hướng chính">
-      <a href="#products">Sản phẩm</a>
-      <a href="#story">Câu chuyện</a>
-      <a href="#ingredients">Thành phần</a>
-      <a href="#subscribe">Subscribe &amp; Save</a>
-      <a href="#faq">FAQ</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#products">Products</a>
+      <a href="#story">Our Story</a>
+      <a href="#ingredients">Science</a>
+      <a href="#sustainability">Sustainability</a>
+      <a href="#subscribe">Subscribe</a>
+      <a href="#faq">Support</a>
     </nav>
     <div class="nav__cta">
-      <a href="#products" class="btn btn--primary">Mua ngay</a>
+      <a href="#" class="nav__small">Sign in</a>
+      <a href="#products" class="btn btn--primary">Shop the line</a>
     </div>
-    <button class="nav__burger" aria-label="Mở menu" aria-expanded="false">
+    <button class="nav__burger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -46,73 +57,53 @@
 <section class="hero">
   <div class="container hero__grid">
     <div class="hero__copy">
-      <span class="eyebrow">Sản phẩm chăm sóc thú cưng bền vững từ dứa</span>
-      <h1>Sản phẩm chăm sóc thú cưng <em>đầu tiên</em> làm từ phụ phẩm dứa.</h1>
-      <p class="lede">Dịu nhẹ với da, mạnh mẽ với hành tinh. RePaws biến 248.000 tấn phụ phẩm dứa Việt Nam thành dòng dầu gội, xịt dưỡng &amp; balm cao cấp — đạt chứng nhận ECOCERT, FDA-ready, đánh giá trung bình 4.4★ trên Amazon US.</p>
+      <span class="eyebrow">A GreenLeaf Vietnam &times; ECOSOI Joint Venture</span>
+      <h1>Pet care, engineered from <em>agricultural by-products.</em></h1>
+      <p class="lede">RePaws turns 248,000 tonnes of Vietnam's pineapple fiber waste into a premium grooming line for the US market — bromelain-powered, ECOCERT certified, FDA registered, and rated 4.4&star; on Amazon US.</p>
       <div class="hero__cta">
-        <a href="#products" class="btn btn--primary btn--lg">Khám phá 3 SKU</a>
-        <a href="#story" class="btn btn--ghost btn--lg">Tại sao là dứa?</a>
+        <a href="#products" class="btn btn--primary btn--lg">Shop the collection</a>
+        <a href="#story" class="btn btn--ghost btn--lg">Read the brief →</a>
       </div>
-      <ul class="hero__stats" role="list">
-        <li><strong>4.4★</strong><span>Amazon US Rating</span></li>
-        <li><strong>480+</strong><span>Subscribe &amp; Save</span></li>
-        <li><strong>100%</strong><span>Plant-sourced</span></li>
-        <li><strong>0</strong><span>Paraben &amp; Sulfate</span></li>
-      </ul>
+      <dl class="hero__stats">
+        <div><dt>Customer rating</dt><dd>4.4 / 5.0</dd></div>
+        <div><dt>Active subscribers</dt><dd>480+</dd></div>
+        <div><dt>Y1 revenue</dt><dd>USD 95K</dd></div>
+        <div><dt>Plant-sourced</dt><dd>100%</dd></div>
+      </dl>
     </div>
-    <div class="hero__visual" aria-hidden="true">
-      <div class="hero__blob hero__blob--1"></div>
-      <div class="hero__blob hero__blob--2"></div>
-      <div class="hero__bottle">
+    <aside class="hero__visual" aria-hidden="true">
+      <div class="hero__product">
         <div class="bottle">
           <div class="bottle__cap"></div>
+          <div class="bottle__neck"></div>
           <div class="bottle__body">
             <span class="bottle__brand">RePaws</span>
             <span class="bottle__name">Pineapple<br/>Shampoo</span>
-            <span class="bottle__size">500 ml · Skin &amp; Coat</span>
+            <span class="bottle__line"></span>
+            <span class="bottle__size">500&nbsp;ml · Skin &amp; Coat</span>
+            <span class="bottle__cert">ECOCERT · FDA</span>
           </div>
         </div>
       </div>
-      <span class="hero__badge hero__badge--1">🍍 Bromelain Enzyme</span>
-      <span class="hero__badge hero__badge--2">🌱 ECOCERT</span>
-      <span class="hero__badge hero__badge--3">🐶 Dog &amp; Cat Safe</span>
-    </div>
-  </div>
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <span>● ECOCERT Certified</span>
-      <span>● FDA-Ready</span>
-      <span>● Made from Pineapple Waste</span>
-      <span>● Cruelty Free</span>
-      <span>● Soapberry Saponin</span>
-      <span>● No Parabens · No Sulfates</span>
-      <span>● Recyclable Packaging</span>
-      <span>● ECOCERT Certified</span>
-      <span>● FDA-Ready</span>
-      <span>● Made from Pineapple Waste</span>
-      <span>● Cruelty Free</span>
-      <span>● Soapberry Saponin</span>
-      <span>● No Parabens · No Sulfates</span>
-      <span>● Recyclable Packaging</span>
-    </div>
+      <div class="hero__caption">
+        <span class="hero__caption-label">Featured</span>
+        <span class="hero__caption-title">RPW-SHP-01 · Pineapple Shampoo</span>
+        <span class="hero__caption-meta">500 ml · USD 13.00</span>
+      </div>
+    </aside>
   </div>
 </section>
 
-<!-- Trust / Logo strip -->
+<!-- Trust strip -->
 <section class="trust">
   <div class="container">
-    <p class="trust__title">Được tin dùng &amp; chứng nhận bởi</p>
+    <p class="trust__title">Certifications &amp; Compliance</p>
     <div class="trust__row">
       <span class="trust__item">ECOCERT</span>
-      <span class="trust__sep"></span>
       <span class="trust__item">FDA Registered</span>
-      <span class="trust__sep"></span>
-      <span class="trust__item">VNTEST</span>
-      <span class="trust__sep"></span>
+      <span class="trust__item">VNTEST Verified</span>
       <span class="trust__item">ISO 22716 GMP</span>
-      <span class="trust__sep"></span>
-      <span class="trust__item">Amazon Choice</span>
-      <span class="trust__sep"></span>
+      <span class="trust__item">MoCRA Compliant</span>
       <span class="trust__item">Climate Pledge Friendly</span>
     </div>
   </div>
@@ -122,286 +113,353 @@
 <section class="products" id="products">
   <div class="container">
     <header class="section__head">
-      <span class="eyebrow">Hệ sinh thái 3 SKU</span>
-      <h2>Một quy trình chăm sóc — trọn vẹn từ tắm gội đến nuôi dưỡng.</h2>
-      <p>Bộ ba sản phẩm bổ trợ lẫn nhau, được thiết kế cho chó &amp; mèo có làn da nhạy cảm. Kết hợp cả ba để tiết kiệm 10%.</p>
+      <div>
+        <span class="eyebrow">The collection · 03 SKUs</span>
+        <h2>A complete grooming protocol — wash, refresh, restore.</h2>
+      </div>
+      <p class="section__head-note">Three formulations engineered to work in sequence. Bundle the full line and save 10%.</p>
     </header>
 
     <div class="product-grid">
-      <article class="card card--shampoo">
+
+      <article class="card">
+        <div class="card__index">01</div>
         <div class="card__media">
-          <div class="bottle bottle--yellow">
+          <div class="bottle bottle--md">
             <div class="bottle__cap"></div>
+            <div class="bottle__neck"></div>
             <div class="bottle__body">
               <span class="bottle__brand">RePaws</span>
               <span class="bottle__name">Pineapple<br/>Shampoo</span>
+              <span class="bottle__line"></span>
               <span class="bottle__size">500 ml</span>
+              <span class="bottle__cert">ECOCERT · FDA</span>
             </div>
           </div>
           <span class="card__tag">Bestseller</span>
         </div>
         <div class="card__body">
-          <h3>RePaws Pineapple Shampoo</h3>
-          <p class="card__sku">SKU · RPW-SHP-01 · 500 ml</p>
-          <p class="card__desc">Dầu gội 3-in-1: làm sạch sâu, khử mùi đến 48 giờ &amp; nuôi dưỡng lông mượt mà nhờ enzyme bromelain từ dứa.</p>
+          <header>
+            <p class="card__sku">SKU · RPW-SHP-01</p>
+            <h3>Pineapple Shampoo</h3>
+            <p class="card__category">Skin &amp; Coat Care · 500 ml</p>
+          </header>
+          <p class="card__desc">A 3-in-1 shampoo: deep cleansing, 48-hour deodorization, and conditioning, powered by bromelain enzyme extracted from pineapple by-products.</p>
           <ul class="card__features">
-            <li>Bromelain enzyme từ phụ phẩm dứa</li>
-            <li>Saponin từ bồ hòn — sạch tự nhiên</li>
-            <li>Glycerin + vitamin complex dưỡng lông</li>
+            <li>Bromelain enzyme from pineapple fiber</li>
+            <li>Soapberry-derived saponin surfactant</li>
+            <li>Glycerin + vitamin complex for coat shine</li>
           </ul>
           <div class="card__foot">
-            <span class="price">$13<small>/chai</small></span>
-            <button class="btn btn--primary add-to-cart" data-name="Pineapple Shampoo" data-price="13">Thêm vào giỏ</button>
+            <div class="price-block">
+              <span class="price">USD&nbsp;13.00</span>
+              <span class="price-sub">per 500 ml bottle</span>
+            </div>
+            <button class="btn btn--primary add-to-cart" data-name="Pineapple Shampoo" data-price="13">Add to cart</button>
           </div>
         </div>
       </article>
 
-      <article class="card card--spray">
+      <article class="card">
+        <div class="card__index">02</div>
         <div class="card__media">
-          <div class="bottle bottle--mint">
+          <div class="bottle bottle--md bottle--mint">
             <div class="bottle__cap bottle__cap--spray"></div>
+            <div class="bottle__neck"></div>
             <div class="bottle__body">
               <span class="bottle__brand">RePaws</span>
               <span class="bottle__name">Nourishing<br/>Pet Spray</span>
+              <span class="bottle__line"></span>
               <span class="bottle__size">500 ml</span>
+              <span class="bottle__cert">ECOCERT · FDA</span>
             </div>
           </div>
-          <span class="card__tag card__tag--new">Mới</span>
+          <span class="card__tag card__tag--new">New release</span>
         </div>
         <div class="card__body">
-          <h3>RePaws Nourishing Pet Spray</h3>
-          <p class="card__sku">SKU · RPW-SPR-01 · 500 ml</p>
-          <p class="card__desc">Xịt dưỡng giữa các lần tắm — làm dịu da, khử mùi tức thì, lưu hương gấp 4 lần nhờ công nghệ encapsulation.</p>
+          <header>
+            <p class="card__sku">SKU · RPW-SPR-01</p>
+            <h3>Nourishing Pet Spray</h3>
+            <p class="card__category">Between-Bath Care · 500 ml</p>
+          </header>
+          <p class="card__desc">A leave-in spray that calms skin, neutralizes odor on contact, and locks in scent up to four times longer with proprietary encapsulation technology.</p>
           <ul class="card__features">
-            <li>Khử mùi tức thì, an toàn cho mọi giống</li>
-            <li>Lưu hương đến 48 giờ</li>
-            <li>Probiotic fermentation — 100% pet-safe</li>
+            <li>Instant odor neutralization</li>
+            <li>4× scent retention (up to 48h)</li>
+            <li>Probiotic-fermented, breed-agnostic</li>
           </ul>
           <div class="card__foot">
-            <span class="price">$13<small>/chai</small></span>
-            <button class="btn btn--primary add-to-cart" data-name="Nourishing Pet Spray" data-price="13">Thêm vào giỏ</button>
+            <div class="price-block">
+              <span class="price">USD&nbsp;13.00</span>
+              <span class="price-sub">per 500 ml bottle</span>
+            </div>
+            <button class="btn btn--primary add-to-cart" data-name="Nourishing Pet Spray" data-price="13">Add to cart</button>
           </div>
         </div>
       </article>
 
-      <article class="card card--balm">
+      <article class="card">
+        <div class="card__index">03</div>
         <div class="card__media">
           <div class="jar">
             <div class="jar__lid"></div>
             <div class="jar__body">
               <span class="jar__brand">RePaws</span>
               <span class="jar__name">Pineapple<br/>Pet Balm</span>
+              <span class="jar__line"></span>
               <span class="jar__size">500 g</span>
+              <span class="jar__cert">ECOCERT · FDA</span>
             </div>
           </div>
-          <span class="card__tag card__tag--premium">Premium</span>
+          <span class="card__tag card__tag--premium">Premium tier</span>
         </div>
         <div class="card__body">
-          <h3>RePaws Pineapple Pet Balm</h3>
-          <p class="card__sku">SKU · RPW-BLM-01 · 500 g</p>
-          <p class="card__desc">Balm dưỡng đa năng cho mũi, miệng &amp; pad chân — phục hồi nứt nẻ, bảo vệ trong điều kiện thời tiết khắc nghiệt.</p>
+          <header>
+            <p class="card__sku">SKU · RPW-BLM-01</p>
+            <h3>Pineapple Pet Balm</h3>
+            <p class="card__category">Nose, Mouth &amp; Paw · 500 g</p>
+          </header>
+          <p class="card__desc">A multi-area balm for dry noses, cracked paw pads, and irritated mouth folds. Lick-safe, weather-resistant, and packed in recyclable PCR.</p>
           <ul class="card__features">
-            <li>Bảo vệ pad chân &amp; mũi khô ráp</li>
-            <li>An toàn nếu thú cưng liếm phải</li>
-            <li>Bao bì có thể tái chế, in mực đậu nành</li>
+            <li>Restores paw pads &amp; dry noses</li>
+            <li>Lick-safe and pet-tested</li>
+            <li>PCR jar with soy-ink labelling</li>
           </ul>
           <div class="card__foot">
-            <span class="price">$20<small>/hũ</small></span>
-            <button class="btn btn--primary add-to-cart" data-name="Pineapple Pet Balm" data-price="20">Thêm vào giỏ</button>
+            <div class="price-block">
+              <span class="price">USD&nbsp;20.00</span>
+              <span class="price-sub">per 500 g jar</span>
+            </div>
+            <button class="btn btn--primary add-to-cart" data-name="Pineapple Pet Balm" data-price="20">Add to cart</button>
           </div>
         </div>
       </article>
     </div>
 
     <!-- Bundle -->
-    <div class="bundle">
+    <aside class="bundle">
       <div class="bundle__copy">
-        <span class="eyebrow eyebrow--dark">Bundle tiết kiệm</span>
-        <h3>Bộ 3 SKU đầy đủ — tiết kiệm 10%</h3>
-        <p>Mua trọn bộ Shampoo + Spray + Balm để hoàn thiện quy trình chăm sóc và tiết kiệm hơn $4 so với mua lẻ.</p>
-        <ul class="bundle__pricing">
-          <li><span>Giá lẻ</span><strong>$46</strong></li>
-          <li class="is-deal"><span>Giá bundle</span><strong>$41.40</strong></li>
-        </ul>
+        <span class="eyebrow eyebrow--dark">Full collection</span>
+        <h3>The complete RePaws protocol — 10% off.</h3>
+        <p>Sequence the three SKUs into one care routine. Bundle includes Pineapple Shampoo, Nourishing Pet Spray, and Pineapple Pet Balm with complimentary US shipping.</p>
       </div>
-      <div class="bundle__cta">
-        <button class="btn btn--primary btn--lg add-to-cart" data-name="Bundle 3 SKU" data-price="41.40">Mua trọn bộ — $41.40</button>
-        <p class="bundle__note">Đã bao gồm miễn phí vận chuyển trong nội địa US.</p>
+      <div class="bundle__pricing">
+        <dl>
+          <div><dt>Retail</dt><dd>USD&nbsp;46.00</dd></div>
+          <div class="is-deal"><dt>Bundle</dt><dd>USD&nbsp;41.40</dd></div>
+          <div><dt>You save</dt><dd>USD&nbsp;4.60</dd></div>
+        </dl>
+        <button class="btn btn--accent btn--lg add-to-cart" data-name="Bundle 3 SKU" data-price="41.40">Add bundle to cart</button>
       </div>
-    </div>
+    </aside>
   </div>
 </section>
 
-<!-- Brand story -->
+<!-- Story -->
 <section class="story" id="story">
   <div class="container story__grid">
-    <div class="story__media" aria-hidden="true">
-      <div class="story__circle"></div>
-      <div class="story__leaf story__leaf--1">🍃</div>
-      <div class="story__leaf story__leaf--2">🍍</div>
-      <div class="story__leaf story__leaf--3">🐾</div>
-      <div class="story__leaf story__leaf--4">♻️</div>
-    </div>
     <div class="story__copy">
-      <span class="eyebrow">Câu chuyện thương hiệu</span>
-      <h2>Từ phụ phẩm nông nghiệp đến chai dầu gội cao cấp.</h2>
-      <p>Mỗi năm, Việt Nam thải ra <strong>248.000 tấn phụ phẩm dứa</strong> — phần lá, vỏ và lõi thường bị đốt bỏ. RePaws hợp tác với <strong>ECOSOI Vietnam</strong> để chiết xuất enzyme bromelain từ chính nguồn này, biến rác thải nông nghiệp thành thành phần chăm sóc thú cưng cao cấp.</p>
-      <p>Đây là kinh tế tuần hoàn thực thụ: nông dân có thêm thu nhập, đất đỡ ô nhiễm, và thú cưng nhận được công thức dịu nhẹ nhất có thể.</p>
-      <div class="story__stats">
-        <div><strong>124,000T</strong><span>CO₂ giảm thiểu mỗi năm khi đạt full scale</span></div>
-        <div><strong>80–85%</strong><span>Lượng phụ phẩm dứa được tận dụng</span></div>
-        <div><strong>5×</strong><span>Nhanh hơn nhờ probiotic fermentation</span></div>
-      </div>
+      <span class="eyebrow">Our story</span>
+      <h2>From an agricultural by-product to a certified premium product line.</h2>
+      <p class="story__lede">Vietnam discards roughly <strong>248,000 tonnes of pineapple fiber every year</strong> — the leaf, peel and core that traditionally end up burned at the field edge. Through our joint venture with ECOSOI Vietnam, we recover that fiber, extract its bromelain enzyme, and formulate it into pet care that meets the standards of the US premium-natural segment.</p>
+      <p>This is circular economy as a supply-chain decision, not a marketing line. Farmers earn a secondary revenue stream, soil pollution is reduced, and our cost basis stays competitive against incumbents like Burt's Bees for Pets and Earthbath.</p>
+      <a href="#sustainability" class="link-arrow">Read the sustainability brief →</a>
+    </div>
+    <div class="story__panel">
+      <header>
+        <span class="story__panel-label">Impact at full scale</span>
+      </header>
+      <dl class="story__panel-stats">
+        <div><dt>CO₂ avoided per year</dt><dd>124,000&nbsp;t</dd></div>
+        <div><dt>Pineapple by-product utilized</dt><dd>80–85%</dd></div>
+        <div><dt>Probiotic fermentation cycle</dt><dd>5× faster</dd></div>
+        <div><dt>Joint venture structure</dt><dd>60 / 40</dd></div>
+      </dl>
+      <footer>
+        <span class="story__panel-foot">Source: RePaws Final Report (2027) · NEU Business School EBDB 5</span>
+      </footer>
     </div>
   </div>
 </section>
 
-<!-- Ingredients -->
+<!-- Ingredients / Science -->
 <section class="ingredients" id="ingredients">
   <div class="container">
-    <header class="section__head section__head--center">
-      <span class="eyebrow">Thành phần minh bạch</span>
-      <h2>Mỗi chai RePaws đều có thể truy nguồn — từ ruộng dứa Việt Nam.</h2>
+    <header class="section__head">
+      <div>
+        <span class="eyebrow">The science</span>
+        <h2>Six engineering principles behind every RePaws bottle.</h2>
+      </div>
+      <p class="section__head-note">Each formulation is traceable from a Vietnamese pineapple field to an FDA-registered facility.</p>
     </header>
     <div class="ingredient-grid">
-      <div class="ingredient">
-        <span class="ingredient__icon">🍍</span>
+      <article class="ingredient">
+        <span class="ingredient__num">01</span>
         <h3>Bromelain Enzyme</h3>
-        <p>Chiết xuất từ 80–85% phụ phẩm dứa thường bị bỏ đi. Làm sạch dịu nhẹ, kháng viêm tự nhiên.</p>
-      </div>
-      <div class="ingredient">
-        <span class="ingredient__icon">🌿</span>
+        <p>Recovered from 80–85% of pineapple by-product otherwise discarded. Naturally cleansing, anti-inflammatory, low-irritant.</p>
+      </article>
+      <article class="ingredient">
+        <span class="ingredient__num">02</span>
         <h3>Soapberry Saponin</h3>
-        <p>Từ quả bồ hòn — bài thuốc làm sạch dân gian Việt Nam, qua công nghệ chiết xuất độc quyền.</p>
-      </div>
-      <div class="ingredient">
-        <span class="ingredient__icon">💧</span>
-        <h3>Glycerin + Vitamin</h3>
-        <p>Cấp ẩm sâu cho da và lông, giúp bộ lông bóng mượt, mềm mại.</p>
-      </div>
-      <div class="ingredient">
-        <span class="ingredient__icon">🧬</span>
+        <p>A traditional Vietnamese cleansing remedy, extracted via proprietary process. Sulfate-free surfactant alternative.</p>
+      </article>
+      <article class="ingredient">
+        <span class="ingredient__num">03</span>
+        <h3>Glycerin &amp; Vitamin Complex</h3>
+        <p>Deep moisturization and conditioning for shiny, healthy coats across breeds and skin types.</p>
+      </article>
+      <article class="ingredient">
+        <span class="ingredient__num">04</span>
         <h3>Probiotic Fermentation</h3>
-        <p>Quy trình lên men sinh học — sản xuất nhanh gấp 5 lần, 100% an toàn cho mọi giống chó/mèo.</p>
-      </div>
-      <div class="ingredient">
-        <span class="ingredient__icon">🚫</span>
-        <h3>Không hóa chất độc hại</h3>
-        <p>0% paraben, 0% sulfate, 0% hương liệu tổng hợp. Hoàn toàn phù hợp với da nhạy cảm.</p>
-      </div>
-      <div class="ingredient">
-        <span class="ingredient__icon">♻️</span>
-        <h3>Bao bì tái chế</h3>
-        <p>Chai PCR có thể tái chế, nhãn in bằng mực đậu nành thân thiện môi trường.</p>
-      </div>
+        <p>Biological process that compresses production cycle by 5× while maintaining 100% pet-safe outputs.</p>
+      </article>
+      <article class="ingredient">
+        <span class="ingredient__num">05</span>
+        <h3>Zero Restricted Inputs</h3>
+        <p>No parabens, no sulfates, no synthetic fragrance. Compliant with FDA and EU sensitive-skin standards.</p>
+      </article>
+      <article class="ingredient">
+        <span class="ingredient__num">06</span>
+        <h3>Recyclable Primary Pack</h3>
+        <p>PCR bottles and jars labelled with soy-based ink. End-of-life recovery built into the supply chain.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- Compare -->
-<section class="compare">
-  <div class="container">
-    <header class="section__head section__head--center">
-      <span class="eyebrow">Khác biệt</span>
-      <h2>Vì sao RePaws khác với phần còn lại của thị trường?</h2>
-    </header>
+<!-- Sustainability snapshot -->
+<section class="sustainability" id="sustainability">
+  <div class="container sustainability__grid">
+    <div>
+      <span class="eyebrow eyebrow--dark">Sustainability brief</span>
+      <h2>The competitive map — and the quadrant we own.</h2>
+      <p>The US pet grooming market is fragmented; the top 2 brands hold ~33% combined. RePaws occupies the open quadrant: <strong>sustainable, safe, and affordable</strong> — a gap left by Vet's Best, TropiClean, Burt's Bees for Pets, Earthbath and Biogance.</p>
+      <a href="#products" class="link-arrow link-arrow--light">View the line →</a>
+    </div>
     <div class="compare__table" role="table">
       <div class="compare__row compare__row--head" role="row">
-        <span role="columnheader">Tiêu chí</span>
+        <span role="columnheader">Criteria</span>
         <span role="columnheader" class="compare__brand">RePaws</span>
-        <span role="columnheader">Mass brand</span>
-        <span role="columnheader">Brand "natural" khác</span>
+        <span role="columnheader">Mass</span>
+        <span role="columnheader">Natural</span>
       </div>
       <div class="compare__row" role="row">
-        <span role="cell">Nguồn nguyên liệu tuần hoàn</span>
-        <span role="cell" class="ok">✓ Phụ phẩm dứa</span>
-        <span role="cell" class="no">✗</span>
-        <span role="cell" class="no">✗</span>
+        <span>Circular-economy sourcing</span>
+        <span class="ok">Yes</span>
+        <span class="no">No</span>
+        <span class="no">No</span>
       </div>
       <div class="compare__row" role="row">
-        <span role="cell">Chứng nhận ECOCERT</span>
-        <span role="cell" class="ok">✓</span>
-        <span role="cell" class="no">✗</span>
-        <span role="cell" class="maybe">~</span>
+        <span>ECOCERT certified</span>
+        <span class="ok">Yes</span>
+        <span class="no">No</span>
+        <span class="maybe">Partial</span>
       </div>
       <div class="compare__row" role="row">
-        <span role="cell">FDA-registered formula</span>
-        <span role="cell" class="ok">✓</span>
-        <span role="cell" class="ok">✓</span>
-        <span role="cell" class="maybe">~</span>
+        <span>FDA-registered formula</span>
+        <span class="ok">Yes</span>
+        <span class="ok">Yes</span>
+        <span class="maybe">Partial</span>
       </div>
       <div class="compare__row" role="row">
-        <span role="cell">0% paraben / sulfate</span>
-        <span role="cell" class="ok">✓</span>
-        <span role="cell" class="no">✗</span>
-        <span role="cell" class="ok">✓</span>
+        <span>Paraben &amp; sulfate free</span>
+        <span class="ok">Yes</span>
+        <span class="no">No</span>
+        <span class="ok">Yes</span>
       </div>
       <div class="compare__row" role="row">
-        <span role="cell">Giá ($10–15)</span>
-        <span role="cell" class="ok">$13</span>
-        <span role="cell" class="ok">$8–10</span>
-        <span role="cell" class="no">$18–25</span>
+        <span>Mainstream price band</span>
+        <span class="ok">$13</span>
+        <span class="ok">$8–10</span>
+        <span class="no">$18–25</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Testimonials -->
+<!-- Reviews -->
 <section class="reviews">
   <div class="container">
-    <header class="section__head section__head--center">
-      <span class="eyebrow">Khách hàng nói gì</span>
-      <h2>Đánh giá trung bình 4.4★ từ hộ gia đình Mỹ.</h2>
+    <header class="section__head">
+      <div>
+        <span class="eyebrow">Verified buyers</span>
+        <h2>Average 4.4 / 5.0 across Amazon US reviews.</h2>
+      </div>
+      <p class="section__head-note">A selection of recent verified-purchase reviews from US households.</p>
     </header>
     <div class="review-grid">
       <figure class="review">
-        <div class="review__stars">★★★★★</div>
-        <blockquote>"Bé Bella nhà mình bị dị ứng với phần lớn shampoo. Đổi sang RePaws, da bé hết kích ứng sau 2 tuần. Mùi dứa rất nhẹ, không nồng."</blockquote>
-        <figcaption>— Megan T., California · Verified Buyer</figcaption>
+        <div class="review__rating">
+          <span class="review__stars" aria-label="5 out of 5">★★★★★</span>
+          <span class="review__verified">Verified Purchase</span>
+        </div>
+        <blockquote>"Bella is allergic to most shampoos on the market. We switched to RePaws and her irritation cleared in two weeks. The pineapple scent is subtle, never overpowering."</blockquote>
+        <figcaption>
+          <strong>Megan T.</strong>
+          <span>California · Pomeranian, 4 yrs</span>
+        </figcaption>
       </figure>
       <figure class="review">
-        <div class="review__stars">★★★★★</div>
-        <blockquote>"Câu chuyện thương hiệu thật sự thuyết phục mình. Mua thử thì lông bé Golden bóng hẳn lên. Đã đăng ký Subscribe &amp; Save."</blockquote>
-        <figcaption>— Daniel R., Brooklyn NY · Verified Buyer</figcaption>
+        <div class="review__rating">
+          <span class="review__stars" aria-label="5 out of 5">★★★★★</span>
+          <span class="review__verified">Verified Purchase</span>
+        </div>
+        <blockquote>"The brand story sold me. The product kept me. Our Golden Retriever's coat is noticeably glossier and we've moved the entire household onto Subscribe &amp; Save."</blockquote>
+        <figcaption>
+          <strong>Daniel R.</strong>
+          <span>Brooklyn NY · Golden Retriever, 6 yrs</span>
+        </figcaption>
       </figure>
       <figure class="review">
-        <div class="review__stars">★★★★☆</div>
-        <blockquote>"Balm dưỡng pad chân cực tốt cho mùa đông Chicago. Chỉ tiếc là hũ hết nhanh vì bé mình to."</blockquote>
-        <figcaption>— Priya S., Chicago IL · Verified Buyer</figcaption>
+        <div class="review__rating">
+          <span class="review__stars" aria-label="4 out of 5">★★★★☆</span>
+          <span class="review__verified">Verified Purchase</span>
+        </div>
+        <blockquote>"The Pet Balm is essential for Chicago winters — paw pads stay soft and protected. The 500 g jar is generous, though larger breeds will get through it quickly."</blockquote>
+        <figcaption>
+          <strong>Priya S.</strong>
+          <span>Chicago IL · Bernese Mountain Dog, 3 yrs</span>
+        </figcaption>
       </figure>
     </div>
   </div>
 </section>
 
-<!-- Subscribe & Save -->
+<!-- Subscribe -->
 <section class="subscribe" id="subscribe">
   <div class="container subscribe__grid">
-    <div class="subscribe__copy">
-      <span class="eyebrow eyebrow--light">Subscribe &amp; Save</span>
-      <h2>Tiết kiệm 15% mỗi đơn, giao đúng lịch của bé.</h2>
-      <p>Hơn 480 hộ gia đình Mỹ đã đăng ký giao định kỳ. Tự chọn chu kỳ 30 / 60 / 90 ngày, đổi hoặc huỷ bất kỳ lúc nào.</p>
+    <div>
+      <span class="eyebrow eyebrow--dark">Subscribe &amp; Save</span>
+      <h2>Recurring delivery on your schedule. Save 15% on every shipment.</h2>
+      <p>Auto-ship at 30, 60 or 90-day intervals. Pause, swap, or cancel anytime from your account.</p>
       <ul class="subscribe__perks">
-        <li>✓ Giảm 15% mọi đơn</li>
-        <li>✓ Miễn phí vận chuyển</li>
-        <li>✓ Quà tặng birthday cho bé</li>
-        <li>✓ Ưu tiên trải nghiệm SKU mới</li>
+        <li><span>01</span> 15% off every recurring order</li>
+        <li><span>02</span> Complimentary shipping on every shipment</li>
+        <li><span>03</span> Birthday gift for your pet (Y1+)</li>
+        <li><span>04</span> Early access to new SKU launches</li>
       </ul>
       <form class="subscribe__form" id="subscribeForm" novalidate>
         <label class="visually-hidden" for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="email@cuaban.com" required />
-        <button class="btn btn--accent" type="submit">Đăng ký</button>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email" />
+        <button class="btn btn--accent" type="submit">Get my 15% code</button>
       </form>
       <p class="subscribe__note" id="subscribeNote" aria-live="polite"></p>
+      <p class="subscribe__legal">By subscribing you agree to RePaws' Terms of Service and Privacy Notice. US households only.</p>
     </div>
     <div class="subscribe__visual" aria-hidden="true">
-      <div class="ribbon">SAVE 15%</div>
-      <div class="bottle bottle--mini bottle--yellow">
-        <div class="bottle__cap"></div>
-        <div class="bottle__body">
-          <span class="bottle__brand">RePaws</span>
-          <span class="bottle__name">Auto-Ship</span>
-          <span class="bottle__size">Every 30 days</span>
-        </div>
+      <div class="invoice">
+        <header class="invoice__head">
+          <span class="invoice__title">Auto-ship · Monthly</span>
+          <span class="invoice__id">RPW-AS-2027-04</span>
+        </header>
+        <ul class="invoice__lines">
+          <li><span>Pineapple Shampoo · 500 ml</span><span>$13.00</span></li>
+          <li><span>Nourishing Pet Spray · 500 ml</span><span>$13.00</span></li>
+          <li><span>Pineapple Pet Balm · 500 g</span><span>$20.00</span></li>
+        </ul>
+        <div class="invoice__row"><span>Subtotal</span><span>$46.00</span></div>
+        <div class="invoice__row invoice__row--save"><span>Subscribe &amp; Save 15%</span><span>−$6.90</span></div>
+        <div class="invoice__row invoice__row--total"><span>Today's charge</span><span>$39.10</span></div>
       </div>
     </div>
   </div>
@@ -409,109 +467,119 @@
 
 <!-- FAQ -->
 <section class="faq" id="faq">
-  <div class="container">
-    <header class="section__head section__head--center">
-      <span class="eyebrow">FAQ</span>
-      <h2>Câu hỏi thường gặp.</h2>
+  <div class="container faq__grid">
+    <header class="faq__head">
+      <span class="eyebrow">Support</span>
+      <h2>Frequently asked questions.</h2>
+      <p>Can't find what you're looking for? Email <a href="mailto:support@repaws.co">support@repaws.co</a>.</p>
     </header>
     <div class="faq__list">
       <details>
-        <summary>RePaws có an toàn cho mèo không?</summary>
-        <p>Có. Cả 3 SKU đều được kiểm nghiệm an toàn cho cả chó và mèo, kể cả những bé có làn da nhạy cảm. Sản phẩm không chứa tinh dầu độc cho mèo và đã pass kiểm nghiệm VNTEST (pH 5.5–7.0, kim loại nặng ≤ 10 ppm, kích ứng da 0).</p>
+        <summary>Is RePaws safe for cats as well as dogs?</summary>
+        <p>Yes. All three SKUs are tested for cats and dogs, including pets with sensitive skin. Formulations contain no essential oils that are toxic to cats and have passed VNTEST analysis (pH 5.5–7.0, heavy metals ≤ 10 ppm, zero skin irritation, microbial count ≤ 100 CFU/g).</p>
       </details>
       <details>
-        <summary>Sản phẩm sản xuất ở đâu?</summary>
-        <p>RePaws được sản xuất tại nhà máy OEM đạt chứng nhận GMP / ISO 22716 tại Việt Nam. Nguyên liệu chính (bromelain từ phụ phẩm dứa &amp; saponin từ bồ hòn) được cung cấp bởi ECOSOI Vietnam — đối tác liên doanh chuyên xử lý phụ phẩm nông nghiệp.</p>
+        <summary>Where is the product manufactured?</summary>
+        <p>RePaws is contract-manufactured at a GMP / ISO 22716 certified OEM facility in Vietnam. Active ingredients (bromelain from pineapple by-product, saponin from soapberry) are supplied by ECOSOI Vietnam, our joint venture partner.</p>
       </details>
       <details>
-        <summary>Bao lâu thì giao hàng?</summary>
-        <p>Đơn nội địa Mỹ giao trong 2–5 ngày làm việc qua Amazon FBA. Subscribe &amp; Save được giao đúng chu kỳ bạn chọn (30 / 60 / 90 ngày).</p>
+        <summary>What is the standard delivery window?</summary>
+        <p>US domestic orders ship via Amazon FBA in 2–5 business days. Subscribe &amp; Save shipments dispatch on the 30/60/90-day schedule you select at checkout.</p>
       </details>
       <details>
-        <summary>Tôi có thể hủy Subscribe &amp; Save không?</summary>
-        <p>Có. Bạn có thể tạm dừng, đổi chu kỳ hoặc hủy bất kỳ lúc nào trong tài khoản, không có phí ẩn.</p>
+        <summary>How do I cancel a Subscribe &amp; Save plan?</summary>
+        <p>Pause, change frequency, or cancel anytime from your RePaws account. There are no cancellation fees and no minimum number of shipments.</p>
       </details>
       <details>
-        <summary>Sản phẩm có được kiểm nghiệm trên động vật không?</summary>
-        <p>Không. RePaws cam kết cruelty-free 100%. Sản phẩm chỉ được test an toàn qua phòng lab độc lập và qua khảo sát tự nguyện với 10 hộ gia đình Mỹ trong giai đoạn MVP.</p>
+        <summary>Is the product tested on animals?</summary>
+        <p>No. RePaws is committed to a cruelty-free policy. Safety is validated through independent laboratory testing and a voluntary 10-household MVP study conducted in the US during pre-launch.</p>
+      </details>
+      <details>
+        <summary>Do you offer wholesale or retail partnerships?</summary>
+        <p>Yes. We are evaluating specialty retail pilots from Year 4 onward (US) and Amazon UK from Year 3. Email <a href="mailto:wholesale@repaws.co">wholesale@repaws.co</a> for our partnership deck.</p>
       </details>
     </div>
   </div>
 </section>
 
-<!-- CTA bottom -->
+<!-- CTA -->
 <section class="cta-bottom">
   <div class="container cta-bottom__row">
     <div>
-      <h2>Sẵn sàng cho thú cưng — và cho hành tinh.</h2>
-      <p>Bắt đầu với bộ 3 SKU đầy đủ, tiết kiệm 10% &amp; miễn phí giao hàng.</p>
+      <span class="eyebrow eyebrow--dark">Ready to switch?</span>
+      <h2>Start your pet on a cleaner, more sustainable routine.</h2>
+      <p>Begin with the full collection — 10% off and complimentary US shipping.</p>
     </div>
-    <a href="#products" class="btn btn--primary btn--lg">Mua bundle ngay</a>
+    <a href="#products" class="btn btn--accent btn--lg">Shop the bundle</a>
   </div>
 </section>
 
 <!-- Footer -->
 <footer class="footer">
   <div class="container footer__grid">
-    <div>
+    <div class="footer__brand">
       <a href="#" class="nav__logo nav__logo--light">
-        <span class="logo-mark">🐾</span>
-        <span class="logo-text">RePaws</span>
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28"><path d="M16 2 L21 11 L31 13 L24 21 L26 31 L16 26 L6 31 L8 21 L1 13 L11 11 Z" fill="currentColor"/></svg>
+        </span>
+        <span class="logo-text">RePaws<sup>®</sup></span>
       </a>
-      <p class="footer__tag">Chăm sóc thú cưng bền vững từ phụ phẩm dứa Việt Nam.</p>
+      <p>Sustainable pet care, engineered from Vietnamese pineapple by-product. A GreenLeaf Vietnam JSC × ECOSOI Vietnam joint venture.</p>
+      <p class="footer__addr">Suite 14F, GreenLeaf Tower<br/>72 Tran Thai Tong, Hanoi, Vietnam</p>
     </div>
     <div>
-      <h4>Sản phẩm</h4>
+      <h4>Products</h4>
       <ul>
         <li><a href="#products">Pineapple Shampoo</a></li>
         <li><a href="#products">Nourishing Pet Spray</a></li>
         <li><a href="#products">Pineapple Pet Balm</a></li>
-        <li><a href="#products">Bundle 3 SKU</a></li>
+        <li><a href="#products">Full Collection Bundle</a></li>
       </ul>
     </div>
     <div>
-      <h4>Thương hiệu</h4>
+      <h4>Company</h4>
       <ul>
-        <li><a href="#story">Câu chuyện</a></li>
-        <li><a href="#ingredients">Thành phần</a></li>
-        <li><a href="#">Chứng nhận</a></li>
-        <li><a href="#">Báo chí</a></li>
+        <li><a href="#story">Our story</a></li>
+        <li><a href="#sustainability">Sustainability</a></li>
+        <li><a href="#">Press &amp; media</a></li>
+        <li><a href="#">Careers</a></li>
       </ul>
     </div>
     <div>
-      <h4>Hỗ trợ</h4>
+      <h4>Support</h4>
       <ul>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#">Vận chuyển &amp; đổi trả</a></li>
-        <li><a href="#">Liên hệ</a></li>
-        <li><a href="#">Đăng ký nhà phân phối</a></li>
+        <li><a href="#">Shipping &amp; returns</a></li>
+        <li><a href="#">Wholesale program</a></li>
+        <li><a href="mailto:support@repaws.co">support@repaws.co</a></li>
       </ul>
     </div>
   </div>
   <div class="container footer__bottom">
-    <span>© 2027 RePaws · A GreenLeaf × ECOSOI Joint Venture</span>
-    <span>Made with 🍍 in Vietnam · Loved across the US</span>
+    <span>© 2027 RePaws — A GreenLeaf × ECOSOI Joint Venture. All rights reserved.</span>
+    <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Cookie preferences</a></span>
   </div>
 </footer>
 
 <!-- Mini cart -->
 <aside class="cart" id="cart" aria-hidden="true">
-  <div class="cart__panel" role="dialog" aria-label="Giỏ hàng">
+  <div class="cart__panel" role="dialog" aria-label="Shopping cart">
     <header class="cart__head">
-      <h3>Giỏ hàng</h3>
-      <button class="cart__close" aria-label="Đóng giỏ hàng">×</button>
+      <h3>Your cart</h3>
+      <button class="cart__close" aria-label="Close cart">×</button>
     </header>
     <ul class="cart__items" id="cartItems"></ul>
     <div class="cart__foot">
-      <div class="cart__total"><span>Tổng</span><strong id="cartTotal">$0.00</strong></div>
-      <button class="btn btn--primary btn--lg cart__checkout">Thanh toán</button>
+      <div class="cart__total"><span>Order total</span><strong id="cartTotal">$0.00</strong></div>
+      <button class="btn btn--primary btn--lg cart__checkout">Proceed to checkout</button>
+      <p class="cart__note">Taxes &amp; shipping calculated at checkout.</p>
     </div>
   </div>
   <div class="cart__overlay"></div>
 </aside>
 
-<button class="cart-toggle" id="cartToggle" aria-label="Mở giỏ hàng">
-  🛒 <span class="cart-toggle__count" id="cartCount">0</span>
+<button class="cart-toggle" id="cartToggle" aria-label="Open cart">
+  Cart <span class="cart-toggle__count" id="cartCount">0</span>
 </button>
 
 <script src="main.js"></script>
