@@ -27,12 +27,23 @@ Bundle 3 SKU: **$41.40** (tiết kiệm 10%).
 
 ## Tính năng tương tác
 
+- **Click vào product card** → mở **modal chi tiết** với 4 tab (Overview / Ingredients / How to use / Specs), gallery thumbnails, rating, qty selector và Add-to-cart riêng.
 - **Mini-cart** lưu trong session (Add to Cart, đếm số lượng, xoá item, tổng tiền).
 - **Form Subscribe** validate email cơ bản.
 - **Sticky nav** + **mobile burger menu**.
 - **Reveal-on-scroll** cho card, ingredient, review.
-- **Marquee** lăn ngang các chứng nhận.
-- **CSS-only product visuals** (chai / hũ) — không cần ảnh, render bằng gradient + clip.
+- Hỗ trợ keyboard (Enter/Space mở modal, Esc đóng).
+
+## Ảnh sản phẩm
+
+Đặt ảnh vào folder `assets/images/`:
+
+- `logo.png` — Logo RePaws
+- `product-shampoo.jpg` — Pineapple Shampoo
+- `product-spray.jpg` — Nourishing Pet Spray
+- `product-balm.jpg` — Pineapple Pet Balm
+
+Xem thêm `assets/images/README.md` cho hướng dẫn chi tiết.
 
 ## Chạy local
 

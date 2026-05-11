@@ -30,7 +30,8 @@
 <header class="nav">
   <div class="container nav__row">
     <a href="#" class="nav__logo" aria-label="RePaws">
-      <span class="logo-mark" aria-hidden="true">
+      <img class="nav__logo-img" src="assets/images/logo.png" alt="RePaws" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
+      <span class="logo-mark logo-mark--fallback" aria-hidden="true" style="display:none">
         <svg viewBox="0 0 32 32" width="28" height="28"><path d="M16 2 L21 11 L31 13 L24 21 L26 31 L16 26 L6 31 L8 21 L1 13 L11 11 Z" fill="currentColor"/></svg>
       </span>
       <span class="logo-text">RePaws<sup>®</sup></span>
@@ -71,19 +72,9 @@
         <div><dt>Plant-sourced</dt><dd>100%</dd></div>
       </dl>
     </div>
-    <aside class="hero__visual" aria-hidden="true">
+    <aside class="hero__visual">
       <div class="hero__product">
-        <div class="bottle">
-          <div class="bottle__cap"></div>
-          <div class="bottle__neck"></div>
-          <div class="bottle__body">
-            <span class="bottle__brand">RePaws</span>
-            <span class="bottle__name">Pineapple<br/>Shampoo</span>
-            <span class="bottle__line"></span>
-            <span class="bottle__size">500&nbsp;ml · Skin &amp; Coat</span>
-            <span class="bottle__cert">ECOCERT · FDA</span>
-          </div>
-        </div>
+        <img class="hero__product-img" src="assets/images/product-shampoo.jpg" alt="RePaws Pineapple Shampoo, 500 ml" />
       </div>
       <div class="hero__caption">
         <span class="hero__caption-label">Featured</span>
@@ -122,21 +113,12 @@
 
     <div class="product-grid">
 
-      <article class="card">
+      <article class="card" data-product="shampoo" tabindex="0" role="button" aria-label="View details for Pineapple Shampoo">
         <div class="card__index">01</div>
         <div class="card__media">
-          <div class="bottle bottle--md">
-            <div class="bottle__cap"></div>
-            <div class="bottle__neck"></div>
-            <div class="bottle__body">
-              <span class="bottle__brand">RePaws</span>
-              <span class="bottle__name">Pineapple<br/>Shampoo</span>
-              <span class="bottle__line"></span>
-              <span class="bottle__size">500 ml</span>
-              <span class="bottle__cert">ECOCERT · FDA</span>
-            </div>
-          </div>
+          <img class="card__img" src="assets/images/product-shampoo.jpg" alt="RePaws Pineapple Shampoo, 500 ml" />
           <span class="card__tag">Bestseller</span>
+          <span class="card__view">View details →</span>
         </div>
         <div class="card__body">
           <header>
@@ -160,21 +142,12 @@
         </div>
       </article>
 
-      <article class="card">
+      <article class="card" data-product="spray" tabindex="0" role="button" aria-label="View details for Nourishing Pet Spray">
         <div class="card__index">02</div>
         <div class="card__media">
-          <div class="bottle bottle--md bottle--mint">
-            <div class="bottle__cap bottle__cap--spray"></div>
-            <div class="bottle__neck"></div>
-            <div class="bottle__body">
-              <span class="bottle__brand">RePaws</span>
-              <span class="bottle__name">Nourishing<br/>Pet Spray</span>
-              <span class="bottle__line"></span>
-              <span class="bottle__size">500 ml</span>
-              <span class="bottle__cert">ECOCERT · FDA</span>
-            </div>
-          </div>
+          <img class="card__img" src="assets/images/product-spray.jpg" alt="RePaws Nourishing Pet Spray, 500 ml" />
           <span class="card__tag card__tag--new">New release</span>
+          <span class="card__view">View details →</span>
         </div>
         <div class="card__body">
           <header>
@@ -198,20 +171,12 @@
         </div>
       </article>
 
-      <article class="card">
+      <article class="card" data-product="balm" tabindex="0" role="button" aria-label="View details for Pineapple Pet Balm">
         <div class="card__index">03</div>
         <div class="card__media">
-          <div class="jar">
-            <div class="jar__lid"></div>
-            <div class="jar__body">
-              <span class="jar__brand">RePaws</span>
-              <span class="jar__name">Pineapple<br/>Pet Balm</span>
-              <span class="jar__line"></span>
-              <span class="jar__size">500 g</span>
-              <span class="jar__cert">ECOCERT · FDA</span>
-            </div>
-          </div>
+          <img class="card__img" src="assets/images/product-balm.jpg" alt="RePaws Pineapple Pet Balm, 500 g" />
           <span class="card__tag card__tag--premium">Premium tier</span>
+          <span class="card__view">View details →</span>
         </div>
         <div class="card__body">
           <header>
@@ -519,7 +484,8 @@
   <div class="container footer__grid">
     <div class="footer__brand">
       <a href="#" class="nav__logo nav__logo--light">
-        <span class="logo-mark" aria-hidden="true">
+        <img class="nav__logo-img nav__logo-img--light" src="assets/images/logo.png" alt="RePaws" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';" />
+        <span class="logo-mark logo-mark--fallback" aria-hidden="true" style="display:none">
           <svg viewBox="0 0 32 32" width="28" height="28"><path d="M16 2 L21 11 L31 13 L24 21 L26 31 L16 26 L6 31 L8 21 L1 13 L11 11 Z" fill="currentColor"/></svg>
         </span>
         <span class="logo-text">RePaws<sup>®</sup></span>
@@ -581,6 +547,66 @@
 <button class="cart-toggle" id="cartToggle" aria-label="Open cart">
   Cart <span class="cart-toggle__count" id="cartCount">0</span>
 </button>
+
+<!-- Product detail modal -->
+<div class="modal" id="productModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal__overlay" data-close></div>
+  <div class="modal__panel" role="document">
+    <button class="modal__close" data-close aria-label="Close">×</button>
+    <div class="modal__grid">
+      <div class="modal__media">
+        <div class="modal__image">
+          <img id="modalImage" src="" alt="" />
+        </div>
+        <ul class="modal__thumbs" id="modalThumbs"></ul>
+      </div>
+      <div class="modal__content">
+        <span class="modal__sku" id="modalSku"></span>
+        <h2 id="modalTitle"></h2>
+        <p class="modal__category" id="modalCategory"></p>
+        <div class="modal__price-row">
+          <span class="modal__price" id="modalPrice"></span>
+          <span class="modal__rating">★★★★☆ <span id="modalRating"></span></span>
+        </div>
+        <p class="modal__desc" id="modalDesc"></p>
+        <div class="modal__tabs" role="tablist">
+          <button class="modal__tab is-active" data-tab="overview" role="tab">Overview</button>
+          <button class="modal__tab" data-tab="ingredients" role="tab">Ingredients</button>
+          <button class="modal__tab" data-tab="how" role="tab">How to use</button>
+          <button class="modal__tab" data-tab="specs" role="tab">Specs</button>
+        </div>
+        <div class="modal__panes">
+          <div class="modal__pane is-active" data-pane="overview" role="tabpanel">
+            <ul id="modalOverview"></ul>
+          </div>
+          <div class="modal__pane" data-pane="ingredients" role="tabpanel">
+            <ul id="modalIngredients" class="modal__ing-list"></ul>
+          </div>
+          <div class="modal__pane" data-pane="how" role="tabpanel">
+            <ol id="modalHow"></ol>
+          </div>
+          <div class="modal__pane" data-pane="specs" role="tabpanel">
+            <dl class="modal__specs" id="modalSpecs"></dl>
+          </div>
+        </div>
+        <div class="modal__cta">
+          <div class="modal__qty">
+            <button class="qty-btn" data-act="dec" aria-label="Decrease">−</button>
+            <span id="modalQty">1</span>
+            <button class="qty-btn" data-act="inc" aria-label="Increase">+</button>
+          </div>
+          <button class="btn btn--primary btn--lg modal__add" id="modalAdd">Add to cart</button>
+        </div>
+        <ul class="modal__badges">
+          <li>ECOCERT</li>
+          <li>FDA Registered</li>
+          <li>Cruelty Free</li>
+          <li>Recyclable PCR</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="main.js"></script>
 </body>
