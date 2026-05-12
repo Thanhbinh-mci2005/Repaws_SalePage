@@ -38,7 +38,7 @@ Bundle 3 SKU: **$41.40** (tiết kiệm 10%).
 
 Đặt ảnh vào folder `assets/images/`:
 
-- `logo.jpg` — Logo RePaws
+- `logo.png` — Logo RePaws (PNG transparent)
 - `product-shampoo.jpg` — Pineapple Shampoo
 - `product-spray.jpg` — Nourishing Pet Spray
 - `product-balm.jpg` — Pineapple Pet Balm

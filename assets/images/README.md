@@ -4,7 +4,7 @@ Drop the following files into this folder. Names must match exactly (case-sensit
 
 | File name | Source / contents | Where it appears |
 |---|---|---|
-| `logo.jpg` | "[PM3] Group Project.jpg" — RePaws logo (PNG with transparent background preferred for cleaner footer rendering) | Top nav |
+| `logo.png` | "[PM3] Group Project.png" — RePaws logo (PNG with transparent background) | Top nav, footer |
 | `product-shampoo.jpg` | 25.jpg — Pineapple Shampoo bottle | Hero, card 01, modal |
 | `product-spray.jpg` | 26.jpg — Nourishing Pet Spray bottle | Card 02, modal |
 | `product-balm.jpg` | 27.jpg — Pineapple Pet Balm jar | Card 03, modal |
