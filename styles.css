@@ -13,6 +13,7 @@
   --gold: #C9A961;
   --gold-soft: #E8D9A8;
   --rust: #B5563B;
+  --paw-orange: #E07641;
   --white: #FFFFFF;
   --success: #2F7D5A;
   --danger: #B5563B;
@@ -166,9 +167,9 @@ p  { margin: 0 0 1em; }
   height: 40px; width: auto; display: block; object-fit: contain;
   mix-blend-mode: multiply;
 }
-/* Footer (dark bg): hide white-bg logo, show text only */
-.nav__logo--light .nav__logo-img { display: none; }
-.nav__logo--light .logo-mark--fallback { display: inline-flex !important; color: var(--gold); }
+.logo-mark--paw,
+.logo-mark--fallback { color: var(--paw-orange); display: inline-flex; line-height: 0; }
+.nav__logo--light .logo-mark--paw { color: var(--paw-orange); }
 .logo-mark { color: var(--forest); display: inline-flex; }
 .nav__logo--light { color: var(--ivory); }
 .nav__logo--light .logo-mark { color: var(--gold); }
