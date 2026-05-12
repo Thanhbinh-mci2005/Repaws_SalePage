@@ -863,7 +863,7 @@ p  { margin: 0 0 1em; }
   padding: 0 6px;
 }
 
-.cart { position: fixed; inset: 0; z-index: 70; pointer-events: none; }
+.cart { position: fixed; inset: 0; z-index: 90; pointer-events: none; }
 .cart[aria-hidden="false"] { pointer-events: auto; }
 .cart__overlay {
   position: absolute; inset: 0; background: rgba(17,24,28,.5);
@@ -1031,7 +1031,7 @@ p  { margin: 0 0 1em; }
 .modal__thumbs li.is-active .thumb__caption { color: var(--forest); }
 
 .modal__content {
-  padding: 48px 44px;
+  padding: 48px 44px 0;
   overflow-y: auto;
   overscroll-behavior: contain;
   display: flex; flex-direction: column;
@@ -1195,27 +1195,43 @@ p  { margin: 0 0 1em; }
   font-variant-numeric: tabular-nums;
 }
 
+/* Sticky bottom footer with solid bg so content can't bleed through */
+.modal__footer {
+  position: sticky;
+  bottom: 0;
+  margin: 16px -44px 0;
+  padding: 18px 44px 28px;
+  background: var(--white);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -8px 16px rgba(17,24,28,.04);
+  z-index: 3;
+}
 .modal__cta {
   display: flex; align-items: stretch; gap: 12px;
-  margin-top: 8px;
+  margin-bottom: 14px;
 }
 .modal__qty {
-  display: inline-flex; align-items: center;
-  border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 0 4px;
+  display: inline-flex; align-items: stretch;
+  border: 1.5px solid var(--line); border-radius: var(--radius);
+  padding: 0;
+  height: auto;
+  background: var(--white);
 }
 .qty-btn {
-  width: 36px; height: 100%;
+  width: 40px;
+  display: inline-flex; align-items: center; justify-content: center;
   font-size: 1.1rem; color: var(--ink-2);
   transition: color .2s;
 }
 .qty-btn:hover { color: var(--forest); }
-.modal__qty span { min-width: 28px; text-align: center; font-weight: 600; }
+.modal__qty span {
+  min-width: 32px; text-align: center; font-weight: 600;
+  display: inline-flex; align-items: center; justify-content: center;
+}
 .modal__add { flex: 1; }
 
 .modal__badges {
-  list-style: none; padding: 16px 0 0; margin: 0;
-  border-top: 1px solid var(--line);
+  list-style: none; padding: 0; margin: 0;
   display: flex; flex-wrap: wrap; gap: 6px 18px;
   font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
   color: var(--muted); font-weight: 600;
