@@ -5,10 +5,23 @@
     shampoo: {
       sku: 'RPW-SHP-01',
       name: 'Pineapple Shampoo',
-      category: 'Skin & Coat Care · 500 ml',
+      category: 'Skin & Coat Care',
       price: 13,
+      priceOriginal: 18,
       rating: '4.5 / 5.0 · 312 reviews',
       image: 'assets/images/product-shampoo.jpg',
+      views: ['front', 'angle', 'macro', 'lifestyle'],
+      scents: [
+        { id: 'pineapple', label: 'Pineapple Original', note: 'Signature' },
+        { id: 'coconut',   label: 'Coconut Breeze',    note: '' },
+        { id: 'lavender',  label: 'Lavender Calm',     note: 'Sensitive skin' },
+        { id: 'oatmeal',   label: 'Oatmeal Soothe',    note: 'Itch relief' }
+      ],
+      sizes: [
+        { id: 'sm', label: '250 ml',  priceMul: 0.62, priceOrigMul: 0.62 },
+        { id: 'md', label: '500 ml',  priceMul: 1,    priceOrigMul: 1, default: true },
+        { id: 'lg', label: '1000 ml', priceMul: 1.85, priceOrigMul: 1.85 }
+      ],
       desc: 'A premium 3-in-1 grooming shampoo formulated with bromelain enzyme recovered from Vietnamese pineapple fiber. Cleanses deeply, deodorizes for up to 48 hours, and conditions in one pass. Designed for sensitive skin, suitable for cats and dogs, and FDA registered for the US market.',
       overview: [
         '3-in-1 cleansing, deodorizing, and conditioning action',
@@ -48,10 +61,21 @@
     spray: {
       sku: 'RPW-SPR-01',
       name: 'Nourishing Pet Spray',
-      category: 'Between-Bath Care · 500 ml',
+      category: 'Between-Bath Care',
       price: 13,
+      priceOriginal: 16,
       rating: '4.4 / 5.0 · 168 reviews',
       image: 'assets/images/product-spray.jpg',
+      views: ['front', 'angle', 'macro', 'lifestyle'],
+      scents: [
+        { id: 'pineapple', label: 'Pineapple Original', note: 'Signature' },
+        { id: 'mint',      label: 'Fresh Mint',         note: 'Cooling' },
+        { id: 'citrus',    label: 'Citrus Burst',       note: 'Energizing' }
+      ],
+      sizes: [
+        { id: 'sm', label: '250 ml', priceMul: 0.62, priceOrigMul: 0.62 },
+        { id: 'md', label: '500 ml', priceMul: 1,    priceOrigMul: 1, default: true }
+      ],
       desc: 'A no-rinse leave-in spray that refreshes skin, neutralizes odor on contact, and locks in scent up to four times longer than traditional pet sprays. Probiotic fermentation makes the formula compatible with every breed and skin type — even the most sensitive.',
       overview: [
         'Instant odor neutralization on contact',
@@ -91,10 +115,21 @@
     balm: {
       sku: 'RPW-BLM-01',
       name: 'Pineapple Pet Balm',
-      category: 'Nose, Mouth & Paw · 500 g',
+      category: 'Nose, Mouth & Paw',
       price: 20,
+      priceOriginal: 25,
       rating: '4.6 / 5.0 · 94 reviews',
       image: 'assets/images/product-balm.jpg',
+      views: ['front', 'angle', 'macro', 'lifestyle'],
+      scents: [
+        { id: 'original', label: 'Unscented Original', note: 'Lick-safe' },
+        { id: 'honey',    label: 'Pineapple Honey',    note: 'Subtle' }
+      ],
+      sizes: [
+        { id: 'sm', label: '100 g',  priceMul: 0.45, priceOrigMul: 0.45 },
+        { id: 'md', label: '500 g',  priceMul: 1,    priceOrigMul: 1, default: true },
+        { id: 'lg', label: '1000 g', priceMul: 1.85, priceOrigMul: 1.85 }
+      ],
       desc: 'A multi-area restorative balm formulated for dry noses, cracked paw pads, and irritated mouth folds. Lick-safe, weather-resistant, and packed in recyclable PCR — built for daily use through every season including extreme winter and summer pavement.',
       overview: [
         'Restores cracked paw pads and dry noses in 3–5 days',
@@ -131,6 +166,13 @@
         'Certifications': 'ECOCERT · FDA · VNTEST'
       }
     }
+  };
+
+  const VIEW_LABELS = {
+    front:     'Front',
+    angle:     '3/4 Angle',
+    macro:     'Macro',
+    lifestyle: 'In Use'
   };
 
   // ---------- Cart ----------
@@ -187,7 +229,6 @@
     cartCountEl.textContent = cart.reduce((s, i) => s + i.qty, 0);
   }
 
-  // Add-to-cart buttons (cards + bundle)
   document.querySelectorAll('.add-to-cart').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -203,21 +244,46 @@
   // ---------- Product Modal ----------
   const modal = document.getElementById('productModal');
   const modalImage = document.getElementById('modalImage');
+  const modalImageWrap = document.querySelector('.modal__image');
   const modalThumbs = document.getElementById('modalThumbs');
   const modalSku = document.getElementById('modalSku');
   const modalTitle = document.getElementById('modalTitle');
   const modalCategory = document.getElementById('modalCategory');
   const modalPrice = document.getElementById('modalPrice');
+  const modalPriceOriginal = document.getElementById('modalPriceOriginal');
+  const modalPriceSave = document.getElementById('modalPriceSave');
   const modalRating = document.getElementById('modalRating');
   const modalDesc = document.getElementById('modalDesc');
   const modalOverview = document.getElementById('modalOverview');
   const modalIngredients = document.getElementById('modalIngredients');
   const modalHow = document.getElementById('modalHow');
   const modalSpecs = document.getElementById('modalSpecs');
+  const modalScents = document.getElementById('modalScents');
+  const modalSizes = document.getElementById('modalSizes');
   const modalQtyEl = document.getElementById('modalQty');
   const modalAddBtn = document.getElementById('modalAdd');
   let modalQty = 1;
   let activeProductKey = null;
+  let activeScent = null;
+  let activeSize = null;
+
+  function recalcPrice() {
+    const p = PRODUCTS[activeProductKey];
+    if (!p) return;
+    const size = p.sizes.find(s => s.id === activeSize) || p.sizes[0];
+    const price = p.price * size.priceMul;
+    const orig  = p.priceOriginal * size.priceOrigMul;
+    const save  = orig - price;
+    const pct   = Math.round((save / orig) * 100);
+    modalPrice.textContent = formatUSD(price);
+    modalPriceOriginal.textContent = formatUSD(orig);
+    modalPriceSave.textContent = `Save ${formatUSD(save)} · ${pct}%`;
+  }
+
+  function setView(viewKey) {
+    if (!modalImageWrap) return;
+    modalImageWrap.className = 'modal__image view-' + viewKey;
+  }
 
   function openModal(key) {
     const p = PRODUCTS[key];
@@ -225,13 +291,15 @@
     activeProductKey = key;
     modalQty = 1;
     modalQtyEl.textContent = modalQty;
+    activeScent = p.scents[0].id;
+    activeSize  = (p.sizes.find(s => s.default) || p.sizes[0]).id;
 
     modalImage.src = p.image;
     modalImage.alt = `RePaws ${p.name}`;
+    setView(p.views[0]);
     modalSku.textContent = `SKU · ${p.sku}`;
     modalTitle.textContent = p.name;
     modalCategory.textContent = p.category;
-    modalPrice.textContent = `USD ${p.price.toFixed(2)}`;
     modalRating.textContent = p.rating;
     modalDesc.textContent = p.desc;
 
@@ -240,17 +308,60 @@
     modalHow.innerHTML = p.how.map(x => `<li>${x}</li>`).join('');
     modalSpecs.innerHTML = Object.entries(p.specs).map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('');
 
-    modalThumbs.innerHTML = `
-      <li class="is-active"><img src="${p.image}" alt="" /></li>
-      <li class="thumb-cert">ECOCERT</li>
-      <li class="thumb-cert">FDA</li>
-      <li class="thumb-cert">VNTEST</li>
-    `;
+    // Scent options
+    modalScents.innerHTML = p.scents.map((s, i) => `
+      <button type="button" class="variant${s.id === activeScent ? ' is-active' : ''}" data-scent="${s.id}">
+        <span class="variant__label">${s.label}</span>
+        ${s.note ? `<span class="variant__note">${s.note}</span>` : ''}
+      </button>
+    `).join('');
+    modalScents.querySelectorAll('button').forEach(b => {
+      b.addEventListener('click', () => {
+        activeScent = b.dataset.scent;
+        modalScents.querySelectorAll('button').forEach(x => x.classList.toggle('is-active', x === b));
+      });
+    });
+
+    // Size options
+    modalSizes.innerHTML = p.sizes.map(s => {
+      const price = p.price * s.priceMul;
+      return `
+        <button type="button" class="variant variant--size${s.id === activeSize ? ' is-active' : ''}" data-size="${s.id}">
+          <span class="variant__label">${s.label}</span>
+          <span class="variant__price">${formatUSD(price)}</span>
+        </button>
+      `;
+    }).join('');
+    modalSizes.querySelectorAll('button').forEach(b => {
+      b.addEventListener('click', () => {
+        activeSize = b.dataset.size;
+        modalSizes.querySelectorAll('button').forEach(x => x.classList.toggle('is-active', x === b));
+        recalcPrice();
+      });
+    });
+
+    // Gallery thumbnails (multiple views of the same product image)
+    modalThumbs.innerHTML = p.views.map((v, i) => `
+      <li class="${i === 0 ? 'is-active' : ''} thumb-${v}" data-view="${v}" title="${VIEW_LABELS[v]}">
+        <div class="thumb__inner thumb__inner--${v}">
+          <img src="${p.image}" alt="${VIEW_LABELS[v]}" />
+        </div>
+        <span class="thumb__caption">${VIEW_LABELS[v]}</span>
+      </li>
+    `).join('');
+    modalThumbs.querySelectorAll('li').forEach(li => {
+      li.addEventListener('click', () => {
+        const view = li.dataset.view;
+        modalThumbs.querySelectorAll('li').forEach(x => x.classList.toggle('is-active', x === li));
+        setView(view);
+      });
+    });
 
     // Reset tabs
     document.querySelectorAll('.modal__tab').forEach(t => t.classList.toggle('is-active', t.dataset.tab === 'overview'));
     document.querySelectorAll('.modal__pane').forEach(pn => pn.classList.toggle('is-active', pn.dataset.pane === 'overview'));
 
+    recalcPrice();
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('is-modal-open');
   }
@@ -260,7 +371,6 @@
     document.body.classList.remove('is-modal-open');
   }
 
-  // Open from each card
   document.querySelectorAll('.card[data-product]').forEach(card => {
     const open = () => openModal(card.dataset.product);
     card.addEventListener('click', (e) => {
@@ -272,13 +382,11 @@
     });
   });
 
-  // Close
   modal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closeModal));
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') closeModal();
   });
 
-  // Tabs
   document.querySelectorAll('.modal__tab').forEach(tab => {
     tab.addEventListener('click', () => {
       const key = tab.dataset.tab;
@@ -287,7 +395,6 @@
     });
   });
 
-  // Quantity controls
   document.querySelectorAll('.qty-btn').forEach(b => {
     b.addEventListener('click', () => {
       if (b.dataset.act === 'inc') modalQty += 1;
@@ -296,11 +403,14 @@
     });
   });
 
-  // Modal add-to-cart
   modalAddBtn.addEventListener('click', () => {
     if (!activeProductKey) return;
     const p = PRODUCTS[activeProductKey];
-    addToCart(p.name, p.price, modalQty);
+    const size  = p.sizes.find(s => s.id === activeSize) || p.sizes[0];
+    const scent = p.scents.find(s => s.id === activeScent) || p.sizes[0];
+    const variantName = `${p.name} · ${size.label} · ${scent.label}`;
+    const price = p.price * size.priceMul;
+    addToCart(variantName, price, modalQty);
     const original = modalAddBtn.textContent;
     modalAddBtn.textContent = `Added ${modalQty} to cart`;
     modalAddBtn.disabled = true;

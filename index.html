@@ -134,8 +134,9 @@
           </ul>
           <div class="card__foot">
             <div class="price-block">
+              <span class="price-original">USD&nbsp;18.00</span>
               <span class="price">USD&nbsp;13.00</span>
-              <span class="price-sub">per 500 ml bottle</span>
+              <span class="price-sub">500 ml · <span class="price-save">Save 28%</span></span>
             </div>
             <button class="btn btn--primary add-to-cart" data-name="Pineapple Shampoo" data-price="13">Add to cart</button>
           </div>
@@ -163,8 +164,9 @@
           </ul>
           <div class="card__foot">
             <div class="price-block">
+              <span class="price-original">USD&nbsp;16.00</span>
               <span class="price">USD&nbsp;13.00</span>
-              <span class="price-sub">per 500 ml bottle</span>
+              <span class="price-sub">500 ml · <span class="price-save">Save 19%</span></span>
             </div>
             <button class="btn btn--primary add-to-cart" data-name="Nourishing Pet Spray" data-price="13">Add to cart</button>
           </div>
@@ -192,8 +194,9 @@
           </ul>
           <div class="card__foot">
             <div class="price-block">
+              <span class="price-original">USD&nbsp;25.00</span>
               <span class="price">USD&nbsp;20.00</span>
-              <span class="price-sub">per 500 g jar</span>
+              <span class="price-sub">500 g · <span class="price-save">Save 20%</span></span>
             </div>
             <button class="btn btn--primary add-to-cart" data-name="Pineapple Pet Balm" data-price="20">Add to cart</button>
           </div>
@@ -210,9 +213,9 @@
       </div>
       <div class="bundle__pricing">
         <dl>
-          <div><dt>Retail</dt><dd>USD&nbsp;46.00</dd></div>
+          <div><dt>Retail</dt><dd><s>USD&nbsp;59.00</s></dd></div>
           <div class="is-deal"><dt>Bundle</dt><dd>USD&nbsp;41.40</dd></div>
-          <div><dt>You save</dt><dd>USD&nbsp;4.60</dd></div>
+          <div><dt>You save</dt><dd>USD&nbsp;17.60 · 30%</dd></div>
         </dl>
         <button class="btn btn--accent btn--lg add-to-cart" data-name="Bundle 3 SKU" data-price="41.40">Add bundle to cart</button>
       </div>
@@ -564,11 +567,32 @@
         <span class="modal__sku" id="modalSku"></span>
         <h2 id="modalTitle"></h2>
         <p class="modal__category" id="modalCategory"></p>
+
         <div class="modal__price-row">
-          <span class="modal__price" id="modalPrice"></span>
+          <div class="modal__price-stack">
+            <span class="modal__price-original"><s id="modalPriceOriginal"></s></span>
+            <span class="modal__price" id="modalPrice"></span>
+            <span class="modal__price-save" id="modalPriceSave"></span>
+          </div>
           <span class="modal__rating">★★★★☆ <span id="modalRating"></span></span>
         </div>
+
         <p class="modal__desc" id="modalDesc"></p>
+
+        <div class="modal__variant">
+          <div class="modal__variant-head">
+            <span class="modal__variant-label">Scent</span>
+          </div>
+          <div class="modal__variant-row" id="modalScents"></div>
+        </div>
+
+        <div class="modal__variant">
+          <div class="modal__variant-head">
+            <span class="modal__variant-label">Size</span>
+          </div>
+          <div class="modal__variant-row" id="modalSizes"></div>
+        </div>
+
         <div class="modal__tabs" role="tablist">
           <button class="modal__tab is-active" data-tab="overview" role="tab">Overview</button>
           <button class="modal__tab" data-tab="ingredients" role="tab">Ingredients</button>
